@@ -60,4 +60,20 @@ Maven有三套完全相互独立，互不干扰的生命周期，这三套生命
 再如，mvn deplop阶段的完成，需要intall、virfy等该生命周期里前面阶段的完成。
 所以，这就是为什么我们在执行mvn install时候看到控制台打印了前面所有阶段的执行信息了。
 
+#命令行执行生命周期
 
+一定要谨记， **每个生命周期的相互独立、互不干扰的，而每个生命周期内的阶段是前后依赖的** 。
+
+我们可以用过<code>mvn 阶段名</code>来执行执行各生命周期的阶段。例如：
+
+```maven
+> mvn install  # 执行Default生命周期的install阶段
+> mvn site     # 执行Site生命周期的site阶段
+```
+
+我们也可以按顺序执行各个生命周期的各个阶段，例如：
+
+```
+# 执行Clean生命周期的clean阶段，然后执行Default生命周期的install阶段，最后执行Site生命周期的site阶段
+> mvn clean install site
+```
