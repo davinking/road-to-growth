@@ -77,3 +77,7 @@ Maven有三套完全相互独立，互不干扰的生命周期，这三套生命
 # 执行Clean生命周期的clean阶段，然后执行Default生命周期的install阶段，最后执行Site生命周期的site阶段
 > mvn clean install site
 ```
+
+参考资料
+-------------
+《Maven实战》作者: <a href="http://www.juvenxu.com/" target="_blank">http://www.juvenxu.com/</a>
