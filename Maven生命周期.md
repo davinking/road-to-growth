@@ -96,15 +96,15 @@ post-clean   |
 Default生命周期：
 
 生命周期阶段             | 目标插件                                 | 插件任务
--------------------------|------------------------------------------|-------------------
-process-resources        | maven-resources-plugin:resources         |
-compile                  | maven-compiler-plugin:compile            |
-process-test-resources   | maven-resources-plugin:testResources     |
-test-compile             | maven-compiler-plugin:testCompile        |
-test                     | maven-surefire-plugin:test               |
-package                  | maven-jar-plugin:jar                     |
-install                  | maven-install-plugin:install             |
-deploy                   | maven-deploy-plugin:deploy               |
+-------------------------|------------------------------------------|---------------------------------
+process-resources        | maven-resources-plugin:resources         | 复制资源文件到目标目录
+compile                  | maven-compiler-plugin:compile            | 编译代码到目标目录
+process-test-resources   | maven-resources-plugin:testResources     | 复制测试资源到目标目录
+test-compile             | maven-compiler-plugin:testCompile        | 编译测试代码到目标目录
+test                     | maven-surefire-plugin:test               | 执行测试用例
+package                  | maven-jar-plugin:jar                     | 创建项目jar包
+install                  | maven-install-plugin:install             | 将项目输出构建到本地仓库
+deploy                   | maven-deploy-plugin:deploy               | 将项目输出部署到远程仓库
 
 Site生命周期：
 
