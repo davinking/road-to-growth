@@ -7,3 +7,5 @@
   * Default Lifecycle  构建项目，包括：编译、测试、打包、部署等等
   * Site Lifecycle     生成项目报告、发布站点等
 
+  这三套生命周期是相互独立、互不干扰的，你可以单独调用 **mvn clean** 、 **mvn install** 、 **mvn site** 来分别进行目录清理，构建项目和发布站点。
+
