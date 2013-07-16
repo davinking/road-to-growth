@@ -18,14 +18,15 @@ Maven有三套完全相互独立，互不干扰的生命周期，这三套生命
 每套生命周期由一组 **阶段** （Phase）组成。如下所示：
 
 * Clean Lifecycle    
-  - 地方
-  - 地方
-  - 地方
+  - pre-clean          执行一些需要在clean之前完成的工作
+  - clean              移除所有上一次构建生成的文件
+  - post-clean         执行一些需要在clean之后立刻完成的工作
 * Default Lifecycle  
   - 地方
   - 地方
   - 地方
 * Site Lifecycle  
-  - 地方
-  - 地方
-  - 地方
+  - pre-site          执行一些需要在生成站点文档之前完成的工作
+  - site              生成项目的站点文档
+  - post-site         执行一些需要在生成站点文档之后完成的工作，并且为部署做准备
+  - site-deploy       将生成的站点文档部署到特定的服务器上
