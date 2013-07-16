@@ -95,11 +95,16 @@ post-clean   |
 
 Default生命周期：
 
-生命周期阶段 | 目标插件
--------------|--------------------------
-pre-clean    | 
-clean        | maven-clean-plugin:clean
-post-clean   | 
+生命周期阶段             | 目标插件                                 | 插件任务
+-------------------------|------------------------------------------|-------------------
+process-resources        | maven-resources-plugin:resources         |
+compile                  | maven-compiler-plugin:compile            |
+process-test-resources   | maven-resources-plugin:testResources     |
+test-compile             | maven-compiler-plugin:testCompile        |
+test                     | maven-surefire-plugin:test               |
+package                  | maven-jar-plugin:jar                     |
+install                  | maven-install-plugin:install             |
+deploy                   | maven-deploy-plugin:deploy               |
 
 Site生命周期：
 
