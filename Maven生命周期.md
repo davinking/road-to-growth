@@ -84,13 +84,31 @@ Maven有三套完全相互独立，互不干扰的生命周期，这三套生命
 Maven只是抽象地定义了软件项目的生命周期以及生命周期的各个阶段。具体的实现交由插件完成，而插件以独立的构建的形式存在。
 插件是与生命周期的阶段绑定的，在默认情况下，并不是每个阶段都有与之对应的插件，下面的表格罗列个各个阶段默认对应的插件，以及插件需要完成的任务：
 
-Clean声明周期:
+Clean生命周期:
 
-声明周期阶段 | 目标插件
+生命周期阶段 | 目标插件
 -------------|--------------------------
 pre-clean    | 
 clean        | maven-clean-plugin:clean
 post-clean   | 
+
+
+Default生命周期：
+
+生命周期阶段 | 目标插件
+-------------|--------------------------
+pre-clean    | 
+clean        | maven-clean-plugin:clean
+post-clean   | 
+
+Site生命周期：
+
+生命周期阶段 | 目标插件
+-------------|--------------------------
+pre-site     | 
+site         | maven-site-plugin:site
+post-site    | 
+site-deploy  | maven-site-plugin:deploy
 
 参考资料
 -------------
